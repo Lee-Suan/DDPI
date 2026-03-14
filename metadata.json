@@ -1,0 +1,9 @@
+{
+  "name": "대경데이터정책연구원",
+  "description": "현대적이고 전문적인 디자인의 연구용역 및 경영컨설팅 웹사이트. \n관리자 대시보드와 게시글 관리 시스템을 포함한 다크 럭셔리 테마.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}

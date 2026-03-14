@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Outfit:wght@300;400;600;700&display=swap');
+
+@theme {
+  --color-primary: #000000;
+  --color-secondary: #8B5CF6; /* Purple accent */
+  --color-accent-green: #4ADE80; /* Bright green accent */
+  --font-sans: "Noto Sans KR", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-slate-100 bg-black text-xs md:text-sm selection:bg-secondary/30;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-white tracking-tight;
+  }
+}
+
+.bg-grid-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.section-padding {
+  @apply py-12 px-6 max-w-7xl mx-auto;
+}
+
+.glass-card {
+  @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl transition-all duration-300 hover:bg-accent-green/10 hover:border-accent-green/40 hover:shadow-[0_0_30px_rgba(74,222,128,0.15)];
+}
+
+.btn-primary {
+  @apply bg-secondary text-white px-5 py-2.5 rounded-full font-medium transition-all hover:shadow-[0_0_20px_rgba(139,92,246,0.4)] active:scale-95;
+}
+
+.btn-outline {
+  @apply border border-white/20 text-white px-5 py-2.5 rounded-full font-medium transition-all hover:bg-white/10 active:scale-95;
+}
+
+.admin-input {
+  @apply w-full bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-secondary transition-all;
+}
