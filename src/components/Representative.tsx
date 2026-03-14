@@ -47,8 +47,8 @@ const Representative = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <h2 className="text-2xl font-bold text-white mb-2 break-keep"><span className="text-sm font-light opacity-70 mr-1">대표</span> 이수안</h2>
-                  <div className="inline-block bg-black/50 backdrop-blur-xl border border-white/20 px-5 py-2.5 rounded-full shadow-2xl">
-                    <p className="text-white font-bold text-sm md:text-base tracking-wide break-keep">관광 · 빅데이터 전문가, 치유농업사</p>
+                  <div className="inline-block bg-black/50 backdrop-blur-xl border border-white/20 px-4 py-1.5 rounded-full shadow-2xl">
+                    <p className="text-white font-semibold text-xs md:text-sm tracking-wide break-keep">관광 · 빅데이터 전문가, 치유농업사</p>
                   </div>
                 </div>
               </div>
