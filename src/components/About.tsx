@@ -27,7 +27,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="bg-black overflow-hidden border-y border-white/5 relative">
+    <section id="about" className="bg-black overflow-hidden border-y border-white/5 relative scroll-mt-24">
       {/* Background Text Overlay */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 text-[15vw] font-bold text-white/[0.02] select-none pointer-events-none font-display whitespace-nowrap z-0">
         DATA POLICY

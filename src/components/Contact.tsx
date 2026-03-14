@@ -23,7 +23,7 @@ const Contact: React.FC<ContactProps> = ({ email, phone, address }) => {
   };
 
   return (
-    <section id="contact" className="bg-zinc-950">
+    <section id="contact" className="bg-zinc-950 scroll-mt-24">
       <div className="section-padding">
         <div className="text-center mb-12">
           <span className="text-secondary font-bold tracking-widest text-sm mb-2 block">Get in Touch</span>

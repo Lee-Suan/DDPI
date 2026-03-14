@@ -26,7 +26,7 @@ const Representative = () => {
   ];
 
   return (
-    <section id="representative" className="bg-black relative overflow-hidden border-t border-white/5">
+    <section id="representative" className="bg-black relative overflow-hidden border-t border-white/5 scroll-mt-24">
       <div className="section-padding relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           {/* Left Side: Image & Basic Info */}
