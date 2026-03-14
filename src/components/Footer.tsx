@@ -12,9 +12,10 @@ const Footer: React.FC<FooterProps> = ({ siteName, representative }) => {
         <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-2">
           <div className="max-w-xs">
             <img 
-              src="/logo.png" 
+              src="/logo.svg" 
               alt={siteName} 
               className="h-10 md:h-12 w-auto mb-2 object-contain"
+              style={{ imageRendering: 'crisp-edges' }}
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
                 const fallback = document.getElementById('footer-logo-fallback');

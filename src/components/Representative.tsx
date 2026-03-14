@@ -46,8 +46,10 @@ const Representative = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h2 className="text-2xl font-bold text-white mb-1 break-keep"><span className="text-sm font-light opacity-70 mr-1">대표</span> 이수안</h2>
-                  <p className="text-secondary font-medium text-sm break-keep">관광 · 빅데이터 전문가, 치유농업사</p>
+                  <h2 className="text-2xl font-bold text-white mb-2 break-keep"><span className="text-sm font-light opacity-70 mr-1">대표</span> 이수안</h2>
+                  <div className="inline-block bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-lg">
+                    <p className="text-black font-bold text-[10px] md:text-xs tracking-tight break-keep">관광 · 빅데이터 전문가, 치유농업사</p>
+                  </div>
                 </div>
               </div>
               {/* Decorative elements */}

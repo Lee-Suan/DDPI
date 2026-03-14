@@ -31,9 +31,10 @@ const Navbar: React.FC<NavbarProps> = ({ siteName }) => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <img 
-            src="/logo.png" 
+            src="/logo.svg" 
             alt={siteName} 
             className="h-12 md:h-16 w-auto object-contain"
+            style={{ imageRendering: 'crisp-edges' }}
             onError={(e) => {
               e.currentTarget.style.display = 'none';
               const fallback = document.getElementById('logo-fallback');

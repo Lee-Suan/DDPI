@@ -57,11 +57,17 @@ async function startServer() {
     });
     app.use(vite.middlewares);
   } else {
-    app.use(express.static("dist"));
+    const distPath = path.join(process.cwd(), "dist");
+    app.use(express.static(distPath));
+    
+    // SPA Fallback: Serve index.html for any unknown routes
+    app.get("*", (req, res) => {
+      res.sendFile(path.join(distPath, "index.html"));
+    });
   }
 
   app.listen(3000, "0.0.0.0", () => {
-    console.log("Server running on http://localhost:3000");
+    console.log("Server running on http://0.0.0.0:3000");
   });
 }
 
