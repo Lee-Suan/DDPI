@@ -145,7 +145,7 @@ const About = () => {
         <div>
           <div className="text-center mb-12">
             <span className="text-secondary font-bold tracking-widest text-sm mb-2 block font-display">03</span>
-            <h2 className="text-lg md:text-2xl font-bold text-white break-keep">핵심 가치</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white break-keep">핵심 가치</h2>
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

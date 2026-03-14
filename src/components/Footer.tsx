@@ -40,8 +40,8 @@ const Footer: React.FC<FooterProps> = ({ siteName, representative }) => {
             </div>
           </div>
         </div>
-        <div className="pt-4 border-t border-white/5 flex justify-center items-center text-sm text-slate-400 font-medium tracking-tight font-display uppercase">
-          <p>COPYRIGHT 2026 Daegyeong Data Policy Institute. All Rights Reserved.</p>
+        <div className="pt-4 border-t border-white/5 flex justify-center items-center text-[10px] text-slate-400 font-medium tracking-tight font-display">
+          <p>COPYRIGHT ⓒ 2026 Daegyeong Data Policy Institute. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
