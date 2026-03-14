@@ -14,15 +14,15 @@ const Representative = () => {
     "대경데이터정책연구원 대표",
     "영남대 식품경제외식학과 객원교수",
     "경북연구원 · 대구정책연구원 초빙연구원",
-    "영남대 교비지원포스트닥",
-    "(재)대구경북연구원 연구원 및 객원연구위원",
     "더아이엠씨 데이터사이언스연구소 소장",
-    "경상북도·경산시 주민참여예산위원회 위원",
-    "대구시 수성구 정책자문위원회 위원",
+    "영남대 교비지원포스트닥",
+    "(재)대구경북연구원 연구원·객원연구위원",
+    "경상북도 주민참여예산위원회 위원",
+    "경산시 주민참여예산위원회 위원",
     "대구시 시민공익활동지원위원회 위원",
-    "경상북도 경북관광포럼위원",
-    "세계트리플헬릭스미래전략학회 총무 ·부회장",
-    "대구전시컨벤션센터(EXCO) 전시팀 근무"
+    "대구시 수성구 정책자문위원회 위원",
+    "세계트리플헬릭스미래전략학회 총무·부회장",
+    "경상북도 경북관광포럼위원"
   ];
 
   return (
@@ -112,13 +112,23 @@ const Representative = () => {
                 <Briefcase size={20} className="text-secondary" />
                 주요 경력
               </h4>
-              <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 break-keep">
-                {experience.map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 group">
-                    <CheckCircle2 size={14} className="text-secondary mt-1 shrink-0 opacity-50 group-hover:opacity-100 transition-opacity" />
-                    <span className="text-xs md:text-sm text-slate-300 font-light group-hover:text-white transition-colors">{item}</span>
-                  </div>
-                ))}
+              <div className="flex flex-col md:flex-row gap-x-8 gap-y-4 break-keep">
+                <div className="flex-1 space-y-4">
+                  {experience.slice(0, 6).map((item, i) => (
+                    <div key={i} className="flex items-start gap-3 group">
+                      <CheckCircle2 size={14} className="text-secondary mt-1 shrink-0 opacity-50 group-hover:opacity-100 transition-opacity" />
+                      <span className="text-xs md:text-sm text-slate-300 font-light group-hover:text-white transition-colors">{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex-1 space-y-4">
+                  {experience.slice(6).map((item, i) => (
+                    <div key={i + 6} className="flex items-start gap-3 group">
+                      <CheckCircle2 size={14} className="text-secondary mt-1 shrink-0 opacity-50 group-hover:opacity-100 transition-opacity" />
+                      <span className="text-xs md:text-sm text-slate-300 font-light group-hover:text-white transition-colors">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>
