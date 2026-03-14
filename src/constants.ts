@@ -1,0 +1,25 @@
+import { SiteContent } from './types';
+
+export const INITIAL_DATA: SiteContent = {
+  theme: {
+    primary: "#000000",
+    accent: "#8B5CF6", // Purple
+    font: "Noto Sans KR"
+  },
+  siteInfo: {
+    name: "대경데이터정책연구원(DDPI)",
+    description: "Tourism · Agriculture · Big Data\n전문성과 경험으로 정책과 전략을 설계합니다.",
+    slogan: "Data-driven Policy & Regional Innovation",
+    subSlogan: "데이터 기반 정책과 지역 혁신을 연구합니다.",
+    contactEmail: "gomklee1@gmail.com",
+    contactPhone: "010-9196-3053",
+    address: "대한민국 (전국 대응 가능)",
+    representative: "이수안(SUAN LEE)"
+  },
+  services: [
+    { id: 1, title: "연구용역", items: ["지자체 연구용역", "공공기관 연구용역", "기업 연구용역"] },
+    { id: 2, title: "시장조사 및 데이터 분석", items: ["트렌드 분석", "지역 산업 데이터 분석", "관광, 농업 데이터 분석"] },
+    { id: 3, title: "빅데이터 교육", items: ["공공기관 데이터 교육", "빅데이터 분석 교육"] },
+    { id: 4, title: "경영 컨설팅", items: ["관광 컨설팅", "농업 컨설팅"] }
+  ]
+};

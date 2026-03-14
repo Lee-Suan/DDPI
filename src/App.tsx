@@ -10,19 +10,26 @@ import Footer from './components/Footer';
 import AdminDashboard from './components/AdminDashboard';
 import { SiteContent } from './types';
 import { Settings } from 'lucide-react';
+import { INITIAL_DATA } from './constants';
 
 function App() {
-  const [content, setContent] = useState<SiteContent | null>(null);
+  const [content, setContent] = useState<SiteContent>(INITIAL_DATA);
   const [isAdminOpen, setIsAdminOpen] = useState(false);
 
   useEffect(() => {
     fetch('/api/content')
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok) throw new Error('API not available');
+        return res.json();
+      })
       .then(data => setContent(data))
-      .catch(err => console.error(err));
+      .catch(err => {
+        console.warn('Using initial data as fallback:', err);
+      });
   }, []);
 
-  if (!content) return <div className="h-screen bg-black flex items-center justify-center text-white">Loading...</div>;
+  // No longer need the loading check if we have initial data
+  // if (!content) return ...
 
   return (
     <div className="min-h-screen bg-black text-slate-300 relative overflow-x-hidden">

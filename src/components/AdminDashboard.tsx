@@ -23,9 +23,12 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ content, onUpdate, onCl
       if (res.ok) {
         onUpdate(localContent);
         alert('저장되었습니다.');
+      } else {
+        throw new Error('저장에 실패했습니다. 서버 설정을 확인해주세요.');
       }
     } catch (err) {
       console.error(err);
+      alert('저장 중 오류가 발생했습니다. (정적 호스팅 환경에서는 저장이 지원되지 않을 수 있습니다.)');
     }
   };
 
