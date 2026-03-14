@@ -47,8 +47,8 @@ const Representative = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <h2 className="text-2xl font-bold text-white mb-2 break-keep"><span className="text-sm font-light opacity-70 mr-1">대표</span> 이수안</h2>
-                  <div className="inline-block bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-lg">
-                    <p className="text-black font-bold text-[10px] md:text-xs tracking-tight break-keep">관광 · 빅데이터 전문가, 치유농업사</p>
+                  <div className="inline-block bg-black/50 backdrop-blur-xl border border-white/20 px-5 py-2.5 rounded-full shadow-2xl">
+                    <p className="text-white font-bold text-sm md:text-base tracking-wide break-keep">관광 · 빅데이터 전문가, 치유농업사</p>
                   </div>
                 </div>
               </div>
@@ -91,7 +91,7 @@ const Representative = () => {
                 <span className="text-white font-bold">융합 정책 연구자</span>
               </p>
               
-              <div className="space-y-6 text-slate-300 text-sm md:text-base leading-relaxed font-light break-keep">
+              <div className="space-y-6 text-slate-200 text-base md:text-lg leading-relaxed font-light break-keep">
                 <p>
                   관광경영학 박사로서 지역 정책 연구와 데이터 분석 현장을 누벼온 정책 연구자입니다.
                 </p>
@@ -99,7 +99,7 @@ const Representative = () => {
                   대구시·경상북도가 공동 출연한 (재)대구경북연구원에서의 연구 경험을 바탕으로, 관광 등 다양한 분야를 아우르는 데이터 기반 융합 연구를 수행하고 있습니다.
                 </p>
                 <p>
-                  국내외 SSCI급 학술지 논문 게재, 경북권관광개발계획, 관광 뉴비전 수립 등 다수의 연구과제를 수행하며 실증적 정책 연구의 전문성을 쌓아왔습니다.
+                  SSCI·KCI급 학술지 논문 게재를 비롯해 광역·기초지자체 관광개발, 빅데이터 분석 등 약 30건의 연구과제 및 용역을 수행하며 실증적 정책 연구 분야에서 전문성을 축적해왔습니다.
                 </p>
                 <p>
                   현재 영남대학교 객원교수로 연구와 교육을 병행하며, 치유농업사 자격을 기반으로 치유·농업·관광을 연결하는 새로운 지역 산업 모델을 연구하고 있습니다.

@@ -51,7 +51,7 @@ const Hero: React.FC<HeroProps> = ({ slogan, subSlogan, description }) => {
               >
                 {description.split('\n')[0]}
               </motion.p>
-              <p className="text-sm md:text-base text-slate-300 leading-relaxed font-light whitespace-pre-line break-keep">
+              <p className="text-base md:text-lg text-slate-200 leading-relaxed font-light whitespace-pre-line break-keep">
                 {description.split('\n').slice(1).join('\n')}
               </p>
             </div>

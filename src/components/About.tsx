@@ -109,16 +109,16 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white/15 backdrop-blur-md border border-white/30 p-8 md:p-10 rounded-2xl relative overflow-hidden group hover:bg-accent-green/10 hover:border-accent-green/40 transition-all duration-300"
+            className="glass-card p-10 md:p-12 relative overflow-hidden group"
           >
             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-              <Target size={80} />
+              <Target size={100} />
             </div>
-            <span className="text-secondary font-bold text-sm tracking-widest mb-4 block">01</span>
-            <h3 className="text-lg md:text-2xl font-bold text-white mb-4 break-keep">미션</h3>
-            <p className="text-lg text-secondary font-medium mb-6 break-keep">데이터로 지역 정책의 해답을 찾다</p>
-            <p className="text-slate-100 text-sm leading-relaxed font-light break-keep">
-              대경데이터정책연구원은 데이터 분석과 정책 연구를 통해 지역의 지속가능한 발전 전략을 제시하는 정책 연구기관입니다. 관광, 농업, 치유산업, 지역경제 등 다양한 분야에서 객관적인 데이터 분석과 학술적 연구를 기반으로 지방자치단체와 공공기관이 활용할 수 있는 실행 가능한 정책 솔루션을 제공합니다.
+            <span className="text-secondary font-bold text-sm tracking-widest mb-6 block">01</span>
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 break-keep">미션</h3>
+            <p className="text-xl text-secondary font-medium mb-8 break-keep">데이터로 지역 정책의 해답을 찾다</p>
+            <p className="text-slate-200 text-base md:text-lg leading-relaxed font-light break-keep">
+              대경데이터정책연구원은 데이터 분석과 정책 연구를 통해 지역의 지속가능한 발전 전략을 제시하는 정책 연구기관입니다. 관광, 농업, 지역산업 등 다양한 분야에서 객관적인 데이터 분석과 학술적 연구를 기반으로 지방자치단체와 공공기관이 활용할 수 있는 실행 가능한 정책 솔루션을 제공합니다.
             </p>
           </motion.div>
 
@@ -127,15 +127,15 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="bg-white/15 backdrop-blur-md border border-white/30 p-8 md:p-10 rounded-2xl relative overflow-hidden group hover:bg-accent-green/10 hover:border-accent-green/40 transition-all duration-300"
+            className="glass-card p-10 md:p-12 relative overflow-hidden group"
           >
             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-              <Eye size={80} />
+              <Eye size={100} />
             </div>
-            <span className="text-secondary font-bold text-sm tracking-widest mb-4 block">02</span>
-            <h3 className="text-lg md:text-2xl font-bold text-white mb-4 break-keep">비전</h3>
-            <p className="text-lg text-secondary font-medium mb-6 break-keep">데이터 기반 지역 정책 연구의 선도 기관</p>
-            <p className="text-slate-100 text-sm leading-relaxed font-light break-keep">
+            <span className="text-secondary font-bold text-sm tracking-widest mb-6 block">02</span>
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 break-keep">비전</h3>
+            <p className="text-xl text-secondary font-medium mb-8 break-keep">데이터 기반 지역 정책 연구의 선도 기관</p>
+            <p className="text-slate-200 text-base md:text-lg leading-relaxed font-light break-keep">
               대경데이터정책연구원은 데이터 · 관광 · 농업 융합 연구를 선도하는 대한민국 대표 지역 정책 연구기관으로 성장하는 것을 목표로 합니다. 특히 대구·경북 지역을 중심으로 지역 특화 산업과 정책 전략을 연구하여 지역 혁신과 지속가능한 발전을 이끄는 정책 파트너가 되고자 합니다.
             </p>
           </motion.div>
