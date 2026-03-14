@@ -28,7 +28,7 @@ const Hero: React.FC<HeroProps> = ({ slogan, subSlogan, description }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="max-w-4xl mt-20 md:mt-32"
+            className="max-w-4xl mt-12 md:mt-20"
           >
             <h1 className="flex flex-col gap-4 mb-10">
               <span className="text-2xl md:text-4xl lg:text-5xl text-white font-bold break-keep leading-tight">

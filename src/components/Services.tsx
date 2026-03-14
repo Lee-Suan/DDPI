@@ -16,7 +16,7 @@ const Services: React.FC<ServicesProps> = ({ services }) => {
   ];
 
   return (
-    <section id="services" className="bg-zinc-950 scroll-mt-24">
+    <section id="services" className="bg-zinc-950 scroll-mt-16">
       <div className="section-padding">
         <div className="text-center mb-12">
           <span className="text-secondary font-bold tracking-widest text-sm mb-2 block font-display">Our Services</span>

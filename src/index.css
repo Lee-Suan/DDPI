@@ -24,7 +24,7 @@
 }
 
 .section-padding {
-  @apply py-20 px-6 max-w-7xl mx-auto;
+  @apply pt-12 pb-20 md:pt-16 md:pb-32 px-6 max-w-7xl mx-auto;
 }
 
 .glass-card {
