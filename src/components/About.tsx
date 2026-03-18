@@ -136,7 +136,7 @@ const About = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 break-keep">비전</h3>
             <p className="text-xl text-secondary font-medium mb-8 break-keep">데이터 기반 지역 정책 연구의 선도 기관</p>
             <p className="text-slate-100 text-base leading-relaxed font-light break-keep">
-              대경데이터정책연구원은 데이터 · 관광 · 농업 융합 연구를 선도하는 대한민국 대표 지역 정책 연구기관으로 성장하는 것을 목표로 합니다. 특히 대구·경북 지역을 중심으로 지역 특화 산업과 정책 전략을 연구하여 지역 혁신과 지속가능한 발전을 이끄는 정책 파트너가 되고자 합니다.
+              대경데이터정책연구원은 데이터 · 관광 · 농업 융합 연구를 선도하는 지역 정책 연구기관으로 성장하는 것을 목표로 합니다. 특히 대구·경북 지역을 중심으로 지역 특화 산업과 정책 전략을 연구하여 지역 혁신과 지속가능한 발전을 이끄는 정책 파트너가 되고자 합니다.
             </p>
           </motion.div>
         </div>

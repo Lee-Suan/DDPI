@@ -26,7 +26,7 @@ const Representative = () => {
   ];
 
   return (
-    <section id="representative" className="bg-black relative overflow-hidden border-t border-white/5 scroll-mt-16">
+    <section id="representative" className="bg-black relative overflow-hidden border-t border-white/5 scroll-mt-24">
       <div className="section-padding relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           {/* Left Side: Image & Basic Info */}
@@ -37,11 +37,11 @@ const Representative = () => {
             className="lg:w-1/3 w-full"
           >
             <div className="relative group">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 bg-zinc-900 relative">
+              <div className="aspect-[4/5] max-h-[70vh] rounded-2xl overflow-hidden border border-white/10 bg-zinc-900 relative">
                 <img 
                   src="https://picsum.photos/seed/nature-forest-green/800/1000" 
                   alt="대표 이수안" 
-                  className="w-full h-full object-cover transition-all duration-700"
+                  className="w-full h-full object-contain transition-all duration-700"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
