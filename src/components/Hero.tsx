@@ -3,12 +3,11 @@ import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 
 interface HeroProps {
-  slogan: string;
   subSlogan: string;
   description: string;
 }
 
-const Hero: React.FC<HeroProps> = ({ slogan, subSlogan, description }) => {
+const Hero: React.FC<HeroProps> = ({ subSlogan, description }) => {
   return (
     <section id="home" className="relative min-h-[85vh] flex items-center overflow-hidden bg-black">
       {/* Background Image with Overlay */}
@@ -34,20 +33,13 @@ const Hero: React.FC<HeroProps> = ({ slogan, subSlogan, description }) => {
               <span className="text-2xl md:text-4xl lg:text-5xl text-white font-bold break-keep leading-tight">
                 {subSlogan}
               </span>
-              <span className="text-secondary font-display tracking-widest text-base md:text-lg lg:text-xl font-bold uppercase">
-                {slogan}
-              </span>
             </h1>
 
-            <div className="mb-10 space-y-4 max-w-2xl mx-auto">
+            <div className="mb-24 space-y-6 max-w-3xl mx-auto">
               <motion.p 
-                animate={{ opacity: [0.2, 1, 0.2] }}
-                transition={{ 
-                  duration: 3, 
-                  repeat: Infinity, 
-                  ease: "easeInOut" 
-                }}
-                className="text-lg md:text-xl lg:text-2xl text-white font-medium tracking-wide break-keep"
+                animate={{ opacity: [1, 0.3, 1] }}
+                transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                className="text-xl md:text-2xl lg:text-3xl text-white font-medium tracking-wide break-keep cursor-default"
               >
                 {description.split('\n')[0]}
               </motion.p>
@@ -56,7 +48,7 @@ const Hero: React.FC<HeroProps> = ({ slogan, subSlogan, description }) => {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-6 justify-center">
+            <div className="flex flex-wrap gap-6 justify-center mt-12">
               <a href="#services" className="btn-primary flex items-center gap-2 px-10 py-4 text-sm">
                 서비스 탐색 <ArrowRight size={18} />
               </a>
@@ -69,8 +61,41 @@ const Hero: React.FC<HeroProps> = ({ slogan, subSlogan, description }) => {
       </div>
 
       {/* Animated background elements */}
-      <div className="absolute top-1/4 left-10 w-64 h-64 bg-secondary/10 rounded-full blur-[120px] animate-pulse"></div>
-      <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-blue-500/5 rounded-full blur-[150px] animate-pulse delay-700"></div>
+      <div className="absolute inset-0 z-[1] overflow-hidden pointer-events-none">
+        <motion.div 
+          animate={{ 
+            x: [0, 100, 0], 
+            y: [0, 50, 0],
+            scale: [1, 1.2, 1]
+          }}
+          transition={{ 
+            duration: 20, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
+          }}
+          className="absolute top-[-10%] left-[-10%] w-[800px] h-[800px] bg-secondary/10 rounded-full blur-[200px]"
+        />
+        <motion.div 
+          animate={{ 
+            x: [0, -80, 0], 
+            y: [0, 100, 0],
+            scale: [1, 1.3, 1]
+          }}
+          transition={{ 
+            duration: 25, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 2
+          }}
+          className="absolute bottom-[-10%] right-[-10%] w-[900px] h-[900px] bg-blue-500/5 rounded-full blur-[250px]"
+        />
+        
+        {/* Floating particles */}
+        <div className="absolute top-[20%] right-[15%] w-2 h-2 bg-secondary/40 rounded-full blur-sm animate-pulse"></div>
+        <div className="absolute bottom-[30%] left-[20%] w-3 h-3 bg-white/30 rounded-full blur-sm animate-pulse delay-1000"></div>
+        <div className="absolute top-[60%] left-[40%] w-1.5 h-1.5 bg-secondary/30 rounded-full blur-sm animate-pulse delay-500"></div>
+        <div className="absolute top-[40%] right-[30%] w-1 h-1 bg-white/20 rounded-full blur-sm animate-pulse delay-700"></div>
+      </div>
     </section>
   );
 };

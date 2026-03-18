@@ -20,7 +20,8 @@ const initialData = {
     contactEmail: "gomklee1@gmail.com",
     contactPhone: "010-9196-3053",
     address: "대한민국 (전국 대응 가능)",
-    representative: "이수안(SUAN LEE)"
+    representative: "이수안(SUAN LEE)",
+    logoUrl: ""
   },
   services: [
     { id: 1, title: "연구용역", items: ["지자체 연구용역", "공공기관 연구용역", "기업 연구용역"] },

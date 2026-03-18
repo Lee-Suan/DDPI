@@ -7,12 +7,12 @@ export interface SiteTheme {
 export interface SiteInfo {
   name: string;
   description: string;
-  slogan: string;
   subSlogan: string;
   contactEmail: string;
   contactPhone: string;
   address: string;
   representative: string;
+  logoUrl?: string;
 }
 
 export interface Service {

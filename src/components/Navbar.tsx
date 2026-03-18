@@ -4,9 +4,10 @@ import { motion, AnimatePresence } from 'motion/react';
 
 interface NavbarProps {
   siteName: string;
+  logoUrl?: string;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ siteName }) => {
+const Navbar: React.FC<NavbarProps> = ({ siteName, logoUrl }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -29,21 +30,19 @@ const Navbar: React.FC<NavbarProps> = ({ siteName }) => {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-black/80 backdrop-blur-lg border-b border-white/5 py-3' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <div className="flex items-center gap-2">
-          <img 
-            src="/logo.png" 
-            alt={siteName} 
-            className="h-10 md:h-14 w-auto object-contain"
-            style={{ imageRendering: 'auto' }}
-            onError={(e) => {
-              e.currentTarget.style.display = 'none';
-              const fallback = document.getElementById('logo-fallback');
-              if (fallback) fallback.style.display = 'block';
-            }}
-          />
-          <span id="logo-fallback" className="hidden font-bold text-sm tracking-tight text-white">
-            {siteName}
-          </span>
+        <div className="flex items-center gap-3">
+          {logoUrl ? (
+            <img 
+              src={logoUrl} 
+              alt={siteName} 
+              className="h-8 md:h-10 w-auto object-contain"
+              referrerPolicy="no-referrer"
+            />
+          ) : (
+            <span className="font-bold text-sm tracking-tight text-white font-display">
+              {siteName}
+            </span>
+          )}
         </div>
 
         {/* Desktop Nav */}

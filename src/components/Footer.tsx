@@ -11,18 +11,7 @@ const Footer: React.FC<FooterProps> = ({ siteName, representative }) => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-2">
           <div className="max-w-xs">
-            <img 
-              src="/logo.png" 
-              alt={siteName} 
-              className="h-10 md:h-12 w-auto mb-2 object-contain"
-              style={{ imageRendering: 'auto' }}
-              onError={(e) => {
-                e.currentTarget.style.display = 'none';
-                const fallback = document.getElementById('footer-logo-fallback');
-                if (fallback) fallback.style.display = 'block';
-              }}
-            />
-            <span id="footer-logo-fallback" className="hidden font-bold text-xs tracking-tight text-white block mb-1 font-display">
+            <span className="font-bold text-sm tracking-tight text-white block mb-2 font-display">
               {siteName}
             </span>
             <p className="text-slate-300 text-xs font-light leading-tight break-keep">
@@ -40,7 +29,7 @@ const Footer: React.FC<FooterProps> = ({ siteName, representative }) => {
             </div>
           </div>
         </div>
-        <div className="pt-4 border-t border-white/5 flex justify-center items-center text-[10px] text-slate-400 font-medium tracking-tight font-display">
+        <div className="pt-4 border-t border-white/5 flex justify-center items-center text-xs text-slate-400 font-medium tracking-tight font-display">
           <p>COPYRIGHT ⓒ 2026 Daegyeong Data Policy Institute. All Rights Reserved.</p>
         </div>
       </div>

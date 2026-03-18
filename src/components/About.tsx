@@ -81,12 +81,12 @@ const About = () => {
             className="lg:w-1/2"
           >
             <span className="text-secondary font-bold tracking-widest text-sm mb-4 block font-display">Company Introduction</span>
-            <h2 className="text-2xl md:text-3xl mb-2 font-bold text-white break-keep">회사 소개</h2>
-            <h3 className="text-xl md:text-2xl mb-8 font-light text-slate-200 leading-tight break-keep">
+            <h2 className="text-3xl md:text-4xl mb-2 font-bold text-white break-keep">회사 소개</h2>
+            <h3 className="text-lg md:text-xl mb-8 font-light text-slate-200 leading-tight break-keep">
               데이터로 정책을 설계하고, <br /><span className="text-white font-bold">지역의 미래</span>를 연구합니다.
             </h3>
             
-            <div className="space-y-6 text-slate-300 text-sm md:text-base font-light leading-relaxed break-keep">
+            <div className="space-y-6 text-slate-200 text-base font-light leading-relaxed break-keep">
               <p className="font-medium text-white">
                 대경데이터정책연구원(DDPI)은 데이터 분석과 정책 연구를 기반으로 지역의 지속가능한 발전 전략을 제시하는 데이터 기반 정책 연구·컨설팅 기관입니다.
               </p>
@@ -117,7 +117,7 @@ const About = () => {
             <span className="text-secondary font-bold text-sm tracking-widest mb-6 block">01</span>
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 break-keep">미션</h3>
             <p className="text-xl text-secondary font-medium mb-8 break-keep">데이터로 지역 정책의 해답을 찾다</p>
-            <p className="text-slate-200 text-base md:text-lg leading-relaxed font-light break-keep">
+            <p className="text-slate-100 text-base leading-relaxed font-light break-keep">
               대경데이터정책연구원은 데이터 분석과 정책 연구를 통해 지역의 지속가능한 발전 전략을 제시하는 정책 연구기관입니다. 관광, 농업, 지역산업 등 다양한 분야에서 객관적인 데이터 분석과 학술적 연구를 기반으로 지방자치단체와 공공기관이 활용할 수 있는 실행 가능한 정책 솔루션을 제공합니다.
             </p>
           </motion.div>
@@ -135,7 +135,7 @@ const About = () => {
             <span className="text-secondary font-bold text-sm tracking-widest mb-6 block">02</span>
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 break-keep">비전</h3>
             <p className="text-xl text-secondary font-medium mb-8 break-keep">데이터 기반 지역 정책 연구의 선도 기관</p>
-            <p className="text-slate-200 text-base md:text-lg leading-relaxed font-light break-keep">
+            <p className="text-slate-100 text-base leading-relaxed font-light break-keep">
               대경데이터정책연구원은 데이터 · 관광 · 농업 융합 연구를 선도하는 대한민국 대표 지역 정책 연구기관으로 성장하는 것을 목표로 합니다. 특히 대구·경북 지역을 중심으로 지역 특화 산업과 정책 전략을 연구하여 지역 혁신과 지속가능한 발전을 이끄는 정책 파트너가 되고자 합니다.
             </p>
           </motion.div>
@@ -156,7 +156,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white/10 border border-white/20 p-6 rounded-2xl hover:border-accent-green/50 hover:bg-accent-green/10 transition-all group"
+                className="bg-white/15 border border-white/20 p-6 rounded-2xl hover:border-accent-green/50 hover:bg-accent-green/10 transition-all group"
               >
                 <div className="w-10 h-10 bg-secondary/20 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:scale-110 group-hover:bg-accent-green/20 transition-transform">
                   {value.icon}

@@ -34,7 +34,7 @@ const Expertise = () => {
       <div className="section-padding relative z-10">
         <div className="text-center mb-12">
           <span className="text-secondary font-bold tracking-widest text-sm mb-2 block font-display">Our Expertise</span>
-          <h2 className="text-2xl md:text-3xl mb-4 break-keep">전문 역량</h2>
+          <h2 className="text-3xl md:text-4xl mb-4 break-keep">전문 역량</h2>
           <div className="w-12 h-1 bg-secondary mx-auto"></div>
         </div>
 
@@ -48,7 +48,7 @@ const Expertise = () => {
               viewport={{ once: true }}
               className="glass-card p-8 group"
             >
-              <div className="mb-6 p-3 bg-white/5 w-fit rounded-xl group-hover:bg-accent-green/20 transition-all">
+              <div className="mb-6 p-3 bg-white/10 w-fit rounded-xl group-hover:bg-accent-green/20 transition-all">
                 {area.icon}
               </div>
               <h3 className="text-lg mb-4 text-white group-hover:text-secondary transition-colors break-keep">{area.title}</h3>

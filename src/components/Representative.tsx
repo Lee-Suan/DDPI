@@ -46,8 +46,8 @@ const Representative = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h2 className="text-2xl font-bold text-white mb-2 break-keep"><span className="text-sm font-light opacity-70 mr-1">대표</span> 이수안</h2>
-                  <div className="inline-block bg-black/50 backdrop-blur-xl border border-white/20 px-4 py-1.5 rounded-full shadow-2xl">
+                  <h2 className="text-xl md:text-2xl font-bold text-white mb-2 break-keep"><span className="text-base font-light opacity-70 mr-1">대표</span> <span className="text-xl md:text-2xl">이수안</span></h2>
+                  <div className="inline-block bg-black/70 backdrop-blur-xl border border-white/30 px-4 py-1.5 rounded-full shadow-2xl">
                     <p className="text-white font-semibold text-xs md:text-sm tracking-wide break-keep">관광 · 빅데이터 전문가, 치유농업사</p>
                   </div>
                 </div>
@@ -83,7 +83,7 @@ const Representative = () => {
             className="lg:w-2/3 w-full"
           >
             <span className="text-secondary font-bold tracking-widest text-sm mb-4 block font-display">CEO Profile/Introduction</span>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">대표 소개</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">대표 소개</h2>
             
             <div className="mb-10">
               <p className="text-xl md:text-2xl font-light text-slate-200 leading-relaxed italic mb-8 border-l-4 border-secondary pl-6">
@@ -91,7 +91,7 @@ const Representative = () => {
                 <span className="text-white font-bold">융합 정책 연구자</span>
               </p>
               
-              <div className="space-y-6 text-slate-200 text-base md:text-lg leading-relaxed font-light break-keep">
+              <div className="space-y-6 text-slate-200 text-sm leading-relaxed font-light break-keep">
                 <p>
                   관광경영학 박사로서 지역 정책 연구와 데이터 분석 현장을 누벼온 정책 연구자입니다.
                 </p>

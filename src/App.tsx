@@ -42,11 +42,10 @@ function App() {
       </div>
 
       <div className="relative z-10">
-        <Navbar siteName={content.siteInfo.name} />
+        <Navbar siteName={content.siteInfo.name} logoUrl={content.siteInfo.logoUrl} />
         
         <main>
           <Hero 
-            slogan={content.siteInfo.slogan} 
             subSlogan={content.siteInfo.subSlogan} 
             description={content.siteInfo.description}
           />

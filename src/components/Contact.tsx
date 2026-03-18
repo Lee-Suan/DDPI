@@ -27,7 +27,7 @@ const Contact: React.FC<ContactProps> = ({ email, phone, address }) => {
       <div className="section-padding">
         <div className="text-center mb-12">
           <span className="text-secondary font-bold tracking-widest text-sm mb-2 block">Get in Touch</span>
-          <h2 className="text-2xl md:text-3xl mb-4 break-keep">문의</h2>
+          <h2 className="text-3xl md:text-4xl mb-4 break-keep">문의</h2>
           <div className="w-12 h-1 bg-secondary mx-auto mt-2"></div>
         </div>
 
@@ -43,7 +43,7 @@ const Contact: React.FC<ContactProps> = ({ email, phone, address }) => {
               
               <div className="space-y-6 flex-1">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center shrink-0 border border-secondary/20">
+                  <div className="w-10 h-10 bg-secondary/20 rounded-xl flex items-center justify-center shrink-0 border border-secondary/30">
                     <Mail className="text-secondary" size={18} />
                   </div>
                   <div>
@@ -55,7 +55,7 @@ const Contact: React.FC<ContactProps> = ({ email, phone, address }) => {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center shrink-0 border border-secondary/20">
+                  <div className="w-10 h-10 bg-secondary/20 rounded-xl flex items-center justify-center shrink-0 border border-secondary/30">
                     <Phone className="text-secondary" size={18} />
                   </div>
                   <div>
@@ -67,7 +67,7 @@ const Contact: React.FC<ContactProps> = ({ email, phone, address }) => {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center shrink-0 border border-secondary/20">
+                  <div className="w-10 h-10 bg-secondary/20 rounded-xl flex items-center justify-center shrink-0 border border-secondary/30">
                     <MapPin className="text-secondary" size={18} />
                   </div>
                   <div>
@@ -127,8 +127,8 @@ const Contact: React.FC<ContactProps> = ({ email, phone, address }) => {
                 <textarea
                   required
                   rows={5}
-                  className="admin-input py-3 resize-none flex-1"
-                  placeholder="문의하실 내용을 상세히 적어주세요."
+                  className="admin-input py-3 resize-none flex-1 break-keep"
+                  placeholder="문의하실 내용을 적어주세요"
                   value={formData.message}
                   onChange={(e) => setFormData({...formData, message: e.target.value})}
                 ></textarea>
