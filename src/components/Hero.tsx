@@ -39,7 +39,7 @@ const Hero: React.FC<HeroProps> = ({ subSlogan, description }) => {
               <motion.p 
                 animate={{ opacity: [1, 0.3, 1] }}
                 transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-                className="text-xl md:text-2xl lg:text-3xl text-white font-medium tracking-wide break-keep cursor-default"
+                className="text-base md:text-xl lg:text-2xl text-white font-medium tracking-wide break-keep cursor-default"
               >
                 {description.split('\n')[0]}
               </motion.p>
