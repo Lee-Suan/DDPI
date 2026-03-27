@@ -9,94 +9,124 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ subSlogan, description }) => {
   return (
-    <section id="home" className="relative min-h-[85vh] flex items-center overflow-hidden bg-black">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1920"
-          alt="Abstract Data"
-          className="w-full h-full object-cover opacity-20"
-          referrerPolicy="no-referrer"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/80 to-black"></div>
-      </div>
+    <div className="relative w-full h-full flex items-center bg-black">
+      {/* Mesh Gradient Background */}
+      <div className="mesh-gradient opacity-60"></div>
+      
+      {/* Noise Overlay */}
+      <div className="absolute inset-0 z-0 opacity-20 mix-blend-overlay pointer-events-none bg-grid-pattern"></div>
 
       <div className="section-padding relative z-10 w-full">
         <div className="flex flex-col items-center text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="max-w-4xl mt-12 md:mt-20"
+            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            className="max-w-5xl mt-8 md:mt-12"
           >
-            <h1 className="flex flex-col gap-4 mb-10">
-              <span className="text-2xl md:text-4xl lg:text-5xl text-white font-bold break-keep leading-tight">
+            <h1 className="flex flex-col gap-6 mb-8">
+              <span className="text-3xl md:text-5xl lg:text-7xl font-bold tracking-tighter leading-[1.1] text-gradient-vibrant drop-shadow-2xl whitespace-nowrap">
                 {subSlogan}
               </span>
             </h1>
 
-            <div className="mb-24 space-y-6 max-w-3xl mx-auto">
+            <div className="mb-10 space-y-6 max-w-3xl mx-auto">
               <motion.p 
-                animate={{ opacity: [1, 0.3, 1] }}
-                transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-                className="text-base md:text-xl lg:text-2xl text-white font-medium tracking-wide break-keep cursor-default"
+                initial={{ opacity: 0 }}
+                animate={{ 
+                  opacity: [0, 1, 0] 
+                }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ 
+                  opacity: {
+                    duration: 4, 
+                    repeat: Infinity, 
+                    ease: "easeInOut" 
+                  },
+                  scale: { duration: 0.3 }
+                }}
+                className="text-xl md:text-2xl lg:text-3xl text-white font-light tracking-tight break-keep leading-relaxed cursor-default"
               >
                 {description.split('\n')[0]}
               </motion.p>
-              <p className="text-base md:text-lg text-slate-200 leading-relaxed font-light whitespace-pre-line break-keep">
+              <motion.p 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.7, duration: 1 }}
+                className="text-base md:text-lg text-slate-200 leading-relaxed font-light whitespace-pre-line break-keep max-w-2xl mx-auto"
+              >
                 {description.split('\n').slice(1).join('\n')}
-              </p>
+              </motion.p>
             </div>
 
-            <div className="flex flex-wrap gap-6 justify-center mt-12">
-              <a href="#services" className="btn-primary flex items-center gap-2 px-10 py-4 text-sm">
-                서비스 탐색 <ArrowRight size={18} />
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9, duration: 0.8 }}
+              className="flex flex-wrap gap-6 justify-center mt-20"
+            >
+              <a href="#services" className="btn-primary flex items-center gap-3 group">
+                <span>주요서비스</span>
+                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="#contact" className="btn-outline px-10 py-4 text-sm">
-                문의
+              <a href="#contact" className="btn-outline">
+                협업 문의
               </a>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
 
-      {/* Animated background elements */}
+      {/* Floating Decorative Elements */}
       <div className="absolute inset-0 z-[1] overflow-hidden pointer-events-none">
         <motion.div 
           animate={{ 
-            x: [0, 100, 0], 
-            y: [0, 50, 0],
-            scale: [1, 1.2, 1]
+            x: [0, 50, 0], 
+            y: [0, 30, 0],
+            rotate: [0, 10, 0]
           }}
           transition={{ 
-            duration: 20, 
+            duration: 15, 
             repeat: Infinity, 
             ease: "easeInOut" 
           }}
-          className="absolute top-[-10%] left-[-10%] w-[800px] h-[800px] bg-secondary/10 rounded-full blur-[200px]"
+          className="absolute top-[15%] left-[10%] w-64 h-64 bg-secondary/10 rounded-full blur-[100px]"
         />
         <motion.div 
           animate={{ 
-            x: [0, -80, 0], 
-            y: [0, 100, 0],
-            scale: [1, 1.3, 1]
+            x: [0, -40, 0], 
+            y: [0, 60, 0],
+            rotate: [0, -15, 0]
           }}
           transition={{ 
-            duration: 25, 
+            duration: 18, 
             repeat: Infinity, 
             ease: "easeInOut",
-            delay: 2
+            delay: 1
           }}
-          className="absolute bottom-[-10%] right-[-10%] w-[900px] h-[900px] bg-blue-500/5 rounded-full blur-[250px]"
+          className="absolute bottom-[20%] right-[15%] w-80 h-80 bg-blue-500/10 rounded-full blur-[120px]"
         />
         
-        {/* Floating particles */}
-        <div className="absolute top-[20%] right-[15%] w-2 h-2 bg-secondary/40 rounded-full blur-sm animate-pulse"></div>
-        <div className="absolute bottom-[30%] left-[20%] w-3 h-3 bg-white/30 rounded-full blur-sm animate-pulse delay-1000"></div>
-        <div className="absolute top-[60%] left-[40%] w-1.5 h-1.5 bg-secondary/30 rounded-full blur-sm animate-pulse delay-500"></div>
-        <div className="absolute top-[40%] right-[30%] w-1 h-1 bg-white/20 rounded-full blur-sm animate-pulse delay-700"></div>
+        {/* Animated Lines/Shapes */}
+        <svg className="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
+          <motion.path
+            d="M -100 500 Q 400 200 900 600 T 1900 300"
+            fill="none"
+            stroke="url(#grad1)"
+            strokeWidth="2"
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={{ pathLength: 1, opacity: 1 }}
+            transition={{ duration: 3, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" }}
+          />
+          <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#4ADE80" />
+              <stop offset="100%" stopColor="#3B82F6" />
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -109,47 +109,6 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ content, onUpdate, onCl
                       <h3 className="text-sm font-bold text-white uppercase tracking-[0.2em] break-keep">기본 브랜드 정보</h3>
                     </div>
                     <div className="grid gap-8">
-                      {/* Logo Upload Section */}
-                      <div className="space-y-4">
-                        <label className="text-xs text-slate-300 uppercase font-bold px-1 tracking-wider">로고 이미지</label>
-                        <div className="flex flex-col sm:flex-row items-center gap-6 p-6 glass-card rounded-3xl border-white/5">
-                          <div className="w-24 h-24 md:w-32 md:h-32 bg-zinc-950 rounded-2xl flex items-center justify-center overflow-hidden border border-white/10 shrink-0">
-                            {localContent.siteInfo.logoUrl ? (
-                              <img 
-                                src={localContent.siteInfo.logoUrl} 
-                                alt="Logo Preview" 
-                                className="w-full h-full object-contain p-2"
-                                referrerPolicy="no-referrer"
-                              />
-                            ) : (
-                              <Layout size={32} className="text-zinc-800" />
-                            )}
-                          </div>
-                          <div className="flex-1 space-y-3 w-full text-center sm:text-left">
-                            <div className="relative inline-block w-full">
-                              <input 
-                                type="file" 
-                                accept="image/*"
-                                onChange={handleLogoUpload}
-                                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
-                              />
-                              <button className="w-full bg-indigo-600 text-white py-3 rounded-xl flex items-center justify-center gap-2 text-xs font-bold hover:bg-indigo-500 transition-all active:scale-95 shadow-lg shadow-indigo-500/20">
-                                <Upload size={14} /> 로고 이미지 업로드
-                              </button>
-                            </div>
-                            <p className="text-[9px] md:text-[10px] text-slate-400 px-1 break-keep font-medium">권장 사이즈: 가로형 로고 (최소 높이 80px), 배경이 투명한 PNG 파일을 권장합니다.</p>
-                            {localContent.siteInfo.logoUrl && (
-                              <button 
-                                onClick={() => setLocalContent({...localContent, siteInfo: {...localContent.siteInfo, logoUrl: undefined}})}
-                                className="text-[10px] text-red-400 hover:text-red-300 transition-colors px-1 underline underline-offset-4"
-                              >
-                                로고 삭제
-                              </button>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-
                       <div className="grid md:grid-cols-2 gap-8">
                         <div className="space-y-2">
                           <label className="text-xs text-slate-300 uppercase font-bold px-1 tracking-wider">사이트 이름</label>

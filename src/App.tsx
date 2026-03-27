@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Expertise from './components/Expertise';
 import Representative from './components/Representative';
-import About from './components/About';
+import About, { AboutIntroduction, AboutMission, AboutValues } from './components/About';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -32,7 +32,7 @@ function App() {
   // if (!content) return ...
 
   return (
-    <div className="min-h-screen bg-black text-slate-300 relative overflow-x-hidden">
+    <div className="min-h-screen relative overflow-x-hidden">
       {/* Subtle Background Elements */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-grid-pattern opacity-40"></div>
@@ -42,28 +42,57 @@ function App() {
       </div>
 
       <div className="relative z-10">
-        <Navbar siteName={content.siteInfo.name} logoUrl={content.siteInfo.logoUrl} />
+        <Navbar 
+          siteName={content.siteInfo.name} 
+        />
         
         <main>
-          <Hero 
-            subSlogan={content.siteInfo.subSlogan} 
-            description={content.siteInfo.description}
-          />
-          <About />
-          <Representative />
-          <Expertise />
-          <Services services={content.services} />
-          <Contact 
-            email={content.siteInfo.contactEmail} 
-            phone={content.siteInfo.contactPhone} 
-            address={content.siteInfo.address}
-          />
+          <section id="home" className="snap-section">
+            <Hero 
+              subSlogan={content.siteInfo.subSlogan} 
+              description={content.siteInfo.description}
+            />
+          </section>
+          
+          <section id="about" className="snap-section">
+            <AboutIntroduction />
+          </section>
+
+          <section id="mission" className="snap-section">
+            <AboutMission />
+          </section>
+
+          <section id="values" className="snap-section">
+            <AboutValues />
+          </section>
+          
+          <section id="representative" className="snap-section">
+            <Representative />
+          </section>
+          
+          <section id="expertise" className="snap-section">
+            <Expertise />
+          </section>
+          
+          <section id="services" className="snap-section">
+            <Services services={content.services} />
+          </section>
+          
+          <section id="contact" className="snap-section">
+            <Contact 
+              email={content.siteInfo.contactEmail} 
+              phone={content.siteInfo.contactPhone} 
+              address={content.siteInfo.address}
+            />
+          </section>
         </main>
 
-        <Footer 
-          siteName={content.siteInfo.name} 
-          representative={content.siteInfo.representative}
-        />
+        <section className="snap-start">
+          <Footer 
+            siteName={content.siteInfo.name} 
+            representative={content.siteInfo.representative}
+          />
+        </section>
       </div>
 
       {/* Admin Toggle Button */}

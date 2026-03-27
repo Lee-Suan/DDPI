@@ -12,7 +12,7 @@ const Representative = () => {
 
   const experience = [
     "(현) 대경데이터정책연구원 대표",
-    "(현) 영남대 식품경제외식학과 객원교수",
+    "(현) 영남대학교 객원교수",
     "경북연구원 · 대구정책연구원 초빙연구원",
     "더아이엠씨 데이터사이언스연구소 소장",
     "영남대 교비지원포스트닥",
@@ -26,72 +26,83 @@ const Representative = () => {
   ];
 
   return (
-    <section id="representative" className="bg-black relative overflow-hidden border-t border-white/5 scroll-mt-24">
+    <div className="bg-black w-full h-full relative border-t border-white/5">
       <div className="section-padding relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 items-start">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
           {/* Left Side: Image & Basic Info */}
           <motion.div 
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: false, amount: 0.1 }}
             className="lg:w-1/3 w-full"
           >
             <div className="relative group">
-              <div className="aspect-[4/5] max-h-[70vh] rounded-2xl overflow-hidden border border-white/10 bg-zinc-900 relative">
+              <div className="aspect-[4/5] max-h-[70vh] rounded-[2.5rem] overflow-hidden border border-white/10 bg-white/5 relative shadow-2xl">
                 <img 
                   src="https://picsum.photos/seed/nature-forest-green/800/1000" 
                   alt="대표 이수안" 
-                  className="w-full h-full object-contain transition-all duration-700"
+                  className="w-full h-full object-contain transition-all duration-1000 group-hover:scale-110"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <div className="absolute bottom-6 left-6 right-6">
-                  <h2 className="text-xl md:text-2xl font-bold text-white mb-2 break-keep"><span className="text-base font-light opacity-70 mr-1">대표</span> <span className="text-xl md:text-2xl">이수안</span></h2>
-                  <div className="inline-block bg-black/70 backdrop-blur-xl border border-white/30 px-4 py-1.5 rounded-full shadow-2xl">
-                    <p className="text-white font-semibold text-xs md:text-sm tracking-wide break-keep">관광 · 빅데이터 전문가, 치유농업사</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                <div className="absolute bottom-10 left-10 right-10">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-4 break-keep text-white">
+                    <span className="text-sm md:text-base font-normal text-slate-300 mr-2">대표</span>
+                    <span className="text-white">이수안</span>
+                  </h2>
+                  <div className="inline-block bg-white/10 backdrop-blur-2xl border border-white/10 px-8 py-3 rounded-full shadow-2xl">
+                    <p className="text-slate-100 font-semibold text-sm md:text-base tracking-wide whitespace-nowrap">관광 · 빅데이터 전문가, 치유농업사</p>
                   </div>
                 </div>
               </div>
               {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 border-t-2 border-r-2 border-secondary/30 rounded-tr-3xl -z-10"></div>
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 border-b-2 border-l-2 border-secondary/30 rounded-bl-3xl -z-10"></div>
+              <div className="absolute -top-6 -right-6 w-32 h-32 border-t-4 border-r-4 border-secondary/20 rounded-tr-[3rem] -z-10"></div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 border-b-4 border-l-4 border-secondary/20 rounded-bl-[3rem] -z-10"></div>
             </div>
 
-            <div className="mt-10 space-y-6">
-              <div>
-                <h4 className="text-white font-bold text-sm mb-4 flex items-center gap-2">
-                  <GraduationCap size={18} className="text-secondary" />
+            <div className="mt-12 space-y-8">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+              >
+                <h4 className="text-white font-bold text-base mb-6 flex items-center gap-3">
+                  <div className="p-2 bg-secondary/20 rounded-lg text-secondary">
+                    <GraduationCap size={20} />
+                  </div>
                   학력 및 자격
                 </h4>
-                <ul className="space-y-2 break-keep">
+                <ul className="space-y-3 break-keep">
                   {education.map((item, i) => (
-                    <li key={i} className="text-sm text-slate-400 flex items-start gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-1.5 shrink-0"></div>
-                      {item}
+                    <li key={i} className="text-sm text-slate-200 flex items-start gap-3 group">
+                      <div className="w-2 h-2 rounded-full bg-secondary mt-1.5 shrink-0 group-hover:scale-125 transition-transform"></div>
+                      <span className="group-hover:text-white transition-colors">{item}</span>
                     </li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
 
           {/* Right Side: Detailed Bio & Experience */}
           <motion.div 
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: false, amount: 0.1 }}
             className="lg:w-2/3 w-full"
           >
-            <span className="text-secondary font-bold tracking-widest text-sm mb-4 block font-display">CEO Profile/Introduction</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">대표 소개</h2>
+            <span className="text-secondary font-bold tracking-[0.3em] text-xs mb-6 block uppercase font-display">CEO Profile</span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gradient-vibrant tracking-tighter">대표 소개</h2>
             
-            <div className="mb-10">
-              <p className="text-xl md:text-2xl font-light text-slate-200 leading-relaxed italic mb-8 border-l-4 border-secondary pl-6">
+            <div className="mb-6">
+              <p className="text-2xl md:text-3xl font-light text-slate-100 leading-relaxed mb-6 border-l-8 border-secondary pl-8 py-2">
                 관광·농업·데이터를 잇는 <br className="md:hidden" />
-                <span className="text-white font-bold">융합 정책 연구자</span>
+                <span className="text-gradient-vibrant font-bold">융합 정책 연구자</span>
               </p>
               
-              <div className="space-y-6 text-slate-200 text-sm leading-relaxed font-light break-keep">
+              <div className="space-y-4 text-slate-200 text-base md:text-lg font-light leading-relaxed break-keep">
                 <p>
                   관광경영학 박사로서 지역 정책 연구와 데이터 분석 현장을 누벼온 정책 연구자입니다.
                 </p>
@@ -101,40 +112,43 @@ const Representative = () => {
                 <p>
                   SSCI·KCI급 학술지 논문 게재를 비롯해 광역·기초지자체 관광개발, 빅데이터 분석 등 약 30건의 연구과제 및 용역을 수행하며 실증적 정책 연구 분야에서 전문성을 축적해왔습니다.
                 </p>
-                <p>
-                  현재 영남대학교 객원교수로 연구와 교육을 병행하며, 치유농업사 자격을 기반으로 치유·농업·관광을 연결하는 새로운 지역 산업 모델을 연구하고 있습니다.
-                </p>
               </div>
             </div>
 
-            <div className="glass-card p-8 md:p-10">
-              <h4 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
-                <Briefcase size={20} className="text-secondary" />
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="glass-card p-6 md:p-10 transition-all duration-500"
+            >
+              <h4 className="text-white font-bold text-xl mb-6 flex items-center gap-4">
+                <div className="p-3 bg-secondary/20 rounded-2xl text-secondary">
+                  <Briefcase size={24} />
+                </div>
                 주요 경력
               </h4>
-              <div className="flex flex-col md:flex-row gap-x-8 gap-y-4 break-keep">
-                <div className="flex-1 space-y-4">
+              <div className="grid md:grid-cols-2 gap-x-12 gap-y-5 break-keep">
+                <div className="space-y-4">
                   {experience.slice(0, 6).map((item, i) => (
-                    <div key={i} className="flex items-start gap-3 group">
-                      <CheckCircle2 size={14} className="text-secondary mt-1 shrink-0 opacity-50 group-hover:opacity-100 transition-opacity" />
-                      <span className="text-xs md:text-sm text-slate-300 font-light group-hover:text-white transition-colors">{item}</span>
+                    <div key={i} className="flex items-start gap-4 group">
+                      <CheckCircle2 size={18} className="text-secondary mt-1 shrink-0 opacity-30 group-hover:opacity-100 transition-all duration-300" />
+                      <span className="text-sm md:text-base text-slate-200 font-light group-hover:text-white transition-colors leading-snug">{item}</span>
                     </div>
                   ))}
                 </div>
-                <div className="flex-1 space-y-4">
+                <div className="space-y-4">
                   {experience.slice(6).map((item, i) => (
-                    <div key={i + 6} className="flex items-start gap-3 group">
-                      <CheckCircle2 size={14} className="text-secondary mt-1 shrink-0 opacity-50 group-hover:opacity-100 transition-opacity" />
-                      <span className="text-xs md:text-sm text-slate-300 font-light group-hover:text-white transition-colors">{item}</span>
+                    <div key={i + 6} className="flex items-start gap-4 group">
+                      <CheckCircle2 size={18} className="text-secondary mt-1 shrink-0 opacity-30 group-hover:opacity-100 transition-all duration-300" />
+                      <span className="text-sm md:text-base text-slate-200 font-light group-hover:text-white transition-colors leading-snug">{item}</span>
                     </div>
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

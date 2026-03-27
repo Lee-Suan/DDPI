@@ -12,7 +12,6 @@ export interface SiteInfo {
   contactPhone: string;
   address: string;
   representative: string;
-  logoUrl?: string;
 }
 
 export interface Service {
