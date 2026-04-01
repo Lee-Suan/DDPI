@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Target, Eye, ShieldCheck, Map, Zap, Lightbulb } from 'lucide-react';
+import { Target, Eye, ShieldCheck, Map, Zap, Lightbulb, BarChart3 } from 'lucide-react';
 
 const AboutIntroduction = () => {
   return (
@@ -37,11 +37,11 @@ const AboutIntroduction = () => {
             >
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-secondary/20 flex items-center justify-center text-secondary">
-                  <Zap size={24} />
+                  <BarChart3 size={24} />
                 </div>
                 <div>
                   <div className="text-[10px] text-slate-400 uppercase tracking-[0.2em] font-bold">Data Strategy</div>
-                  <div className="text-white font-bold text-lg">DDPI Research</div>
+                  <div className="text-white font-bold text-lg">DDPI</div>
                 </div>
               </div>
             </motion.div>

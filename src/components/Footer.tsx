@@ -17,8 +17,11 @@ const Footer: React.FC<FooterProps> = ({ siteName, representative }) => {
             <span className="font-bold text-lg tracking-tighter text-gradient-vibrant block mb-4 font-display">
               {siteName}
             </span>
-            <p className="text-slate-300 text-sm font-light leading-relaxed break-keep max-w-md">
+            <p className="text-slate-300 text-sm font-light leading-relaxed break-keep max-w-md mb-3">
               데이터 기반의 과학적 연구와 정책 설계를 통해 지역 사회의 혁신적인 미래를 만들어가는 파트너입니다. 대경데이터정책연구원은 지역의 지속가능한 성장을 위해 최선을 다하겠습니다.
+            </p>
+            <p className="text-[11px] text-slate-400 font-medium tracking-wider font-display uppercase opacity-80 whitespace-nowrap">
+              COPYRIGHT ⓒ 2026 DAEGYEONG DATA POLICY INSTITUTE. ALL RIGHTS RESERVED.
             </p>
           </div>
           
@@ -38,7 +41,6 @@ const Footer: React.FC<FooterProps> = ({ siteName, representative }) => {
         </div>
         
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-slate-300 font-medium tracking-widest font-display">
-          <p>COPYRIGHT ⓒ 2026 DAEGYEONG DATA POLICY INSTITUTE. ALL RIGHTS RESERVED.</p>
         </div>
       </div>
     </footer>

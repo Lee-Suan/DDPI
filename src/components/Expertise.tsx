@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { FileText, BarChart3, GraduationCap, Users } from 'lucide-react';
+import { FileText, BarChart3, BookOpen, Users } from 'lucide-react';
 
 const Expertise = () => {
   const areas = [
@@ -21,7 +21,7 @@ const Expertise = () => {
       glow: "rgba(99,102,241,0.2)"
     },
     {
-      icon: <GraduationCap size={24} />,
+      icon: <BookOpen size={24} />,
       title: "빅데이터 교육",
       description: "대학 및 공공기관을 대상으로 실무 중심의 빅데이터 분석 및 활용 교육을 제공합니다.",
       image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80",

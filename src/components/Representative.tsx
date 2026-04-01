@@ -46,12 +46,12 @@ const Representative = () => {
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-full flex flex-col items-center text-center px-4">
-                  <h2 className="text-2xl md:text-3xl font-bold mb-4 break-keep text-white">
-                    <span className="text-sm md:text-base font-normal text-slate-300 mr-2">대표</span>
+                <div className="absolute bottom-10 left-0 w-full flex flex-col items-start px-4">
+                  <h2 className="text-xl md:text-2xl font-bold mb-4 break-keep text-white pl-12">
+                    <span className="text-xs md:text-sm font-normal text-slate-300 mr-2">대표</span>
                     <span className="text-white">이수안</span>
                   </h2>
-                  <div className="bg-white/20 backdrop-blur-3xl border border-white/20 px-8 py-3 rounded-full shadow-2xl w-fit max-w-[98%]">
+                  <div className="bg-white/20 backdrop-blur-3xl border border-white/20 px-6 py-3 rounded-full shadow-2xl w-fit max-w-[98%] self-center">
                     <p className="text-white font-bold text-[11px] sm:text-xs md:text-sm tracking-tight whitespace-nowrap">관광 · 빅데이터 전문가, 치유농업사</p>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ const Representative = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient-vibrant tracking-tighter">대표 소개</h2>
             
             <div className="mb-4">
-              <p className="text-2xl md:text-3xl font-light text-slate-100 leading-relaxed mb-4 border-l-8 border-secondary pl-8 py-2">
+              <p className="text-xl md:text-2xl font-light text-slate-100 leading-relaxed mb-4 border-l-8 border-secondary pl-8 py-2">
                 관광·농업·데이터를 잇는 <br className="md:hidden" />
                 <span className="text-gradient-vibrant font-bold">융합 정책 연구자</span>
               </p>
@@ -118,7 +118,7 @@ const Representative = () => {
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="glass-card p-6 md:p-10 transition-all duration-500"
+              className="glass-card p-6 md:p-10 transition-all duration-500 mt-12"
             >
               <h4 className="text-white font-bold text-xl mb-4 flex items-center gap-4">
                 <div className="p-3 bg-secondary/20 rounded-2xl text-secondary">

@@ -9,7 +9,22 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ subSlogan, description }) => {
   return (
-    <div className="relative w-full min-h-screen flex items-center bg-black">
+    <div className="relative w-full min-h-screen flex items-center bg-black overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <motion.img 
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 10, ease: "easeOut" }}
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80" 
+          alt="Digital background" 
+          className="w-full h-full object-cover opacity-40 grayscale-[0.5] brightness-75"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/40 to-black"></div>
+        <div className="absolute inset-0 bg-blue-900/10 mix-blend-overlay"></div>
+      </div>
+
       {/* Mesh Gradient Background */}
       <div className="mesh-gradient opacity-60"></div>
       
