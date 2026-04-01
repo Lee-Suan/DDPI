@@ -9,7 +9,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ subSlogan, description }) => {
   return (
-    <div className="relative w-full h-full flex items-center bg-black">
+    <div className="relative w-full min-h-screen flex items-center bg-black">
       {/* Mesh Gradient Background */}
       <div className="mesh-gradient opacity-60"></div>
       
@@ -22,7 +22,7 @@ const Hero: React.FC<HeroProps> = ({ subSlogan, description }) => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-            className="max-w-5xl mt-8 md:mt-12"
+            className="max-w-5xl"
           >
             <h1 className="flex flex-col gap-6 mb-8">
               <span className="text-3xl md:text-5xl lg:text-7xl font-bold tracking-tighter leading-[1.1] text-gradient-vibrant drop-shadow-2xl whitespace-nowrap">
@@ -30,7 +30,7 @@ const Hero: React.FC<HeroProps> = ({ subSlogan, description }) => {
               </span>
             </h1>
 
-            <div className="mb-10 space-y-6 max-w-3xl mx-auto">
+            <div className="mb-8 space-y-4 max-w-3xl mx-auto">
               <motion.p 
                 initial={{ opacity: 0 }}
                 animate={{ 
@@ -63,7 +63,7 @@ const Hero: React.FC<HeroProps> = ({ subSlogan, description }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9, duration: 0.8 }}
-              className="flex flex-wrap gap-6 justify-center mt-20"
+              className="flex flex-wrap gap-6 justify-center mt-12"
             >
               <a href="#services" className="btn-primary flex items-center gap-3 group">
                 <span>주요서비스</span>

@@ -47,7 +47,7 @@ function App() {
         />
         
         <main>
-          <section id="home" className="snap-section">
+          <section id="home" className="snap-section min-h-screen">
             <Hero 
               subSlogan={content.siteInfo.subSlogan} 
               description={content.siteInfo.description}
@@ -56,14 +56,12 @@ function App() {
           
           <section id="about" className="snap-section">
             <AboutIntroduction />
-          </section>
-
-          <section id="mission" className="snap-section">
-            <AboutMission />
-          </section>
-
-          <section id="values" className="snap-section">
-            <AboutValues />
+            <div className="mt-4 md:mt-8">
+              <AboutMission />
+            </div>
+            <div className="mt-6 md:mt-12">
+              <AboutValues />
+            </div>
           </section>
           
           <section id="representative" className="snap-section">

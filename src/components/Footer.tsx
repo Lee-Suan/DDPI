@@ -14,7 +14,7 @@ const Footer: React.FC<FooterProps> = ({ siteName, representative }) => {
       <div className="max-w-7xl mx-auto px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-2">
-            <span className="font-bold text-xl tracking-tighter text-white block mb-4 font-display">
+            <span className="font-bold text-lg tracking-tighter text-gradient-vibrant block mb-4 font-display">
               {siteName}
             </span>
             <p className="text-slate-300 text-sm font-light leading-relaxed break-keep max-w-md">
@@ -39,10 +39,6 @@ const Footer: React.FC<FooterProps> = ({ siteName, representative }) => {
         
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-slate-300 font-medium tracking-widest font-display">
           <p>COPYRIGHT ⓒ 2026 DAEGYEONG DATA POLICY INSTITUTE. ALL RIGHTS RESERVED.</p>
-          <div className="flex gap-8">
-            <a href="#" className="hover:text-white transition-colors">PRIVACY POLICY</a>
-            <a href="#" className="hover:text-white transition-colors">TERMS OF SERVICE</a>
-          </div>
         </div>
       </div>
     </footer>

@@ -46,11 +46,13 @@ const Contact: React.FC<ContactProps> = ({ email, phone, address }) => {
   };
 
   return (
-    <div className="bg-black w-full h-full relative">
-      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-secondary/5 blur-[120px] rounded-full pointer-events-none"></div>
+    <div className="bg-black w-full h-full relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-blue-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-purple-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(74,222,128,0.05),transparent_70%)] pointer-events-none"></div>
       
       <div className="section-padding relative z-10">
-        <div className="text-center mb-8 md:mb-12">
+        <div className="text-center mb-4 md:mb-6">
           <motion.span 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -86,23 +88,24 @@ const Contact: React.FC<ContactProps> = ({ email, phone, address }) => {
             transition={{ duration: 0.6 }}
             className="lg:w-1/3 flex flex-col"
           >
-            <div className="glass-card p-6 md:p-8 flex-1 flex flex-col">
-              <h3 className="text-xl mb-8 font-bold text-gradient-secondary">연락처</h3>
-              <div className="space-y-8">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+            <div className="glass-card p-6 md:p-8 flex-1 flex flex-col relative overflow-hidden group">
+              <div className="absolute -right-10 -top-10 w-32 h-32 bg-secondary/10 blur-2xl rounded-full group-hover:bg-secondary/20 transition-all duration-700"></div>
+              <h3 className="text-xl mb-4 font-bold text-gradient-vibrant">연락처</h3>
+              <div className="space-y-4 relative z-10">
+                <div className="flex items-center gap-4 group/item">
+                  <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 shrink-0 group-hover/item:bg-blue-500 group-hover/item:text-white transition-all duration-300">
                     <Phone size={18} />
                   </div>
                   <p className="text-lg font-medium text-white">{phone}</p>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+                <div className="flex items-center gap-4 group/item">
+                  <div className="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400 shrink-0 group-hover/item:bg-emerald-500 group-hover/item:text-white transition-all duration-300">
                     <Mail size={18} />
                   </div>
                   <p className="text-lg font-medium text-white">{email}</p>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+                <div className="flex items-center gap-4 group/item">
+                  <div className="w-10 h-10 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-400 shrink-0 group-hover/item:bg-purple-500 group-hover/item:text-white transition-all duration-300">
                     <MapPin size={18} />
                   </div>
                   <p className="text-lg font-medium text-white break-keep">{address}</p>

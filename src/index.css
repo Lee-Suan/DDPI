@@ -63,7 +63,7 @@
 }
 
 .snap-section {
-  @apply min-h-screen snap-start flex flex-col justify-center relative scroll-mt-20;
+  @apply snap-start flex flex-col justify-center relative scroll-mt-20;
 }
 
 .mesh-gradient {
@@ -87,11 +87,11 @@
 }
 
 .section-padding {
-  @apply px-6 max-w-7xl mx-auto w-full;
+  @apply px-8 md:px-16 lg:px-24 max-w-7xl mx-auto w-full;
 }
 
 .snap-section .section-padding {
-  @apply py-4 md:py-8;
+  @apply py-6 md:py-10 lg:py-12;
 }
 
 .glass-card {
