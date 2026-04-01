@@ -16,8 +16,8 @@ const Hero: React.FC<HeroProps> = ({ subSlogan, description }) => {
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
           transition={{ duration: 10, ease: "easeOut" }}
-          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80" 
-          alt="Digital background" 
+          src="https://images.unsplash.com/photo-1518005020250-675f0f0fd174?auto=format&fit=crop&w=1920&q=80" 
+          alt="Earth city lights from space" 
           className="w-full h-full object-cover opacity-40 grayscale-[0.5] brightness-75"
           referrerPolicy="no-referrer"
         />
